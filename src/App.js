@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
+import CheckboxExample from "./components/CheckboxExample";
+import TabExample from "./components/TabExample";
+import MenuButtonExample from "./components/MenuButtonExample";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div style={{ display: "flex" }}>
+      <Navbar />
+      <div style={{ marginLeft: "220px", padding: "20px" }}>
+        <Routes>
+          <Route path="/" element={<h2>Welcome to the App!</h2>} />
+          <Route path="/checkbox" element={<CheckboxExample />} />
+          <Route path="/tab" element={<TabExample />} />
+         <Route path="/menuButton"  element={<MenuButtonExample />} ></Route>
+        </Routes>
+      </div>
     </div>
+  </Router>
   );
 }
 

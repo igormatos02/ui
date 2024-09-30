@@ -80,17 +80,14 @@ html {
 
 .content {
   flex-grow: 1;
-  padding: 20px;
+ /* padding: 20px;*/
   background-color: #ffffff;
   border-radius: 10px;
   margin-left: 5px;
 
   display: flex;
   flex-direction: column;
-}
 
-/* Adjust main content area when sidebar is open or closed */
-.content {
   margin-left: 5px; /* Space when sidebar is open */
   transition: margin-left 0.3s ease; /* Smooth transition for margin changes */
 }
@@ -98,3 +95,82 @@ html {
 .sidebar.closed + .content {
   margin-left: -195px; /* No space when sidebar is closed */
 }
+
+.program-title {
+ 
+  background: linear-gradient(135deg, #ffffff 5%, #eceff8 100%);
+  height: 35px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  border-left: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #eceff8;
+}
+
+.scrollable-content{
+  height: calc(100vh);
+  flex-grow: 1; /* Take up the remaining space inside the content area */
+  overflow-y: hidden; /* Make this section scrollable */
+}
+
+
+
+
+/* Scrollable content inside the main content */
+.program-panel {
+  flex-grow: 1; /* Take up the remaining space inside the content area */
+  overflow-y: auto; /* Make this section scrollable */
+  background-color: #fff;
+  height: calc(100vh - 185px);
+
+  scrollbar-width: thin; /* Slim scrollbar for Firefox */
+  scrollbar-color: #888 #f1f1f1; /* Thumb and track colors for Firefox */
+  padding: 20px;
+
+}
+
+/* Webkit Browsers (Chrome, Safari, Edge) */
+.program-panel::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+.program-panel::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track (empty space) */
+}
+
+.program-panel::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scroll thumb */
+  border-radius: 10px; /* Round the scrollbar thumb */
+  border: 2px solid #f1f1f1; /* Optional: space around thumb */
+}
+
+.program-panel::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darken on hover */
+}
+
+
+.top-menu-container {
+  display: flex; /* Arrange the children side by side */
+  gap: 20px; /* Optional: Adds space between the links */
+  align-items: center; /* Vertically align items */
+  background: linear-gradient(135deg, #eceff8 5%, #eceff8 100%);
+  border: 1px solid #ffffff;
+  border-radius: 10px 0px 0px;
+}
+
+
+
+
+
+.tab-list {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  padding: 0; /* Remove default padding if any */
+  margin: 0; /* Remove default margin if any */
+  list-style-type: none; /* Remove bullet points */
+ 
+}
+
+ul{ padding-inline-start: 10px !important;}

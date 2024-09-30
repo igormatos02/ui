@@ -1,0 +1,92 @@
+/* SidebarMenu.css */
+.sidebar {
+    
+
+    height: 100vh;
+    position: relative;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border-radius: 0PX 10PX 0PX 0PX;
+    position: relative;
+    background: linear-gradient(135deg, #FFFFFF 5%, #eceff8 100%);
+    
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-200px); /* Move sidebar out of view */
+    width: 250px; /* Width of the sidebar when open */
+  }
+  
+  .sidebar.open {
+    transform: translateX(0); /* Bring sidebar into view */
+    width: 250px; /* Width of the sidebar when open */
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 0px; /* Position the button to the side of the sidebar */
+    background: transparent;
+    border: none;
+    color: #34495e;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+
+  
+  .toggle-btn:hover {
+    color: #45aff8 ; /* Change background on hover */
+  }
+  
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #4b4e69;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    color: #45aff8;
+  }
+  
+  .menu-item span {
+    margin-left: 10px;
+  }
+  
+  .submenu {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .submenu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .submenu-item:hover {
+    color: #ecf0f1;
+  }
+  
+  .chevron {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .chevron.open {
+    transform: rotate(180deg);
+  }
+  

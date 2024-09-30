@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { DatePicker, DialogContentContainer,Divider } from "monday-ui-react-core";
 import "monday-ui-react-core/dist/main.css";  // Import the default styles
-
+import CustomDatePicker from "./CustomDatePicker";
 
 function PeakerExample() {
   const MOCK_INITIAL_DATE = new Date("2023-09-27");
   const [date, setDate] = useState(MOCK_INITIAL_DATE);  // Use MOCK_INITIAL_DATE directly
+  
+
   
   return (
     <div>
@@ -30,6 +32,9 @@ function PeakerExample() {
     onPickDate={function noRefCheck(){}}
   />
 </DialogContentContainer>
+<h1>Custom Date Peaker with Range</h1>
+<Divider />
+<CustomDatePicker />
     </div>
   );
 }

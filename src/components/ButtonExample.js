@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Button,Flex,IconButton,Icon,Badge,Divider,SplitButton,SplitButtonMenu,Menu, MenuItem,ButtonGroup,MenuButton } from "monday-ui-react-core";
+import {} from "monday-ui-style";
 import { Bolt,Calendar,Check,WhatsNew,Announcement,Add,Sun,Moon,Favorite } from "monday-ui-react-core/icons";
-import "monday-ui-react-core/dist/main.css";  // Import the default styles
-
+//import "monday-ui-react-core/dist/main.css";  // Import the default styles
+//import "monday-ui-style/dist/index.min.css";
 function ButtonExample() {
 
     const [success, setSuccess] = useState(false);

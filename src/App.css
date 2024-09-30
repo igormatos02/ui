@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  background-color:transparent;
+}
+
+body {
+  overflow: hidden;
+  background-color: transparent;
+
+}
+
+
+html {
+
+  background-color:#ecf0f1;
 }
 
 .App-logo {
@@ -21,7 +34,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  background-color:transparent;
+
 }
 
 .App-link {
@@ -35,4 +49,52 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* App.css */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color:transparent;
+}
+
+.main-layout {
+  display: flex;
+  flex-grow: 1;
+  background-color:transparent;
+}
+
+/* App.css */
+.app-layout {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  overflow: hidden; /* Prevent any page-level scrolling */
+  margin-top: 65px;
+  background-color: #ecf0f1;
+}
+
+
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-left: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Adjust main content area when sidebar is open or closed */
+.content {
+  margin-left: 5px; /* Space when sidebar is open */
+  transition: margin-left 0.3s ease; /* Smooth transition for margin changes */
+}
+
+.sidebar.closed + .content {
+  margin-left: -195px; /* No space when sidebar is closed */
 }

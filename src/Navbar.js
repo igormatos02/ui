@@ -7,6 +7,8 @@ function Navbar() {
       <h3>Components</h3>
       <ul style={{ listStyleType: "none", padding: 0 }}>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/buttons">Buttons Example</Link></li>
+        <li><Link to="/peakers">Peakers Example</Link></li>
         <li><Link to="/checkbox">Checkbox Example</Link></li>
         <li><Link to="/tab">Tab Example</Link></li>
         <li><Link to="/menuButton">Menu Button Example</Link></li>
